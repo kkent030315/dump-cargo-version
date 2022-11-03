@@ -1,0 +1,3 @@
+[package]
+name = "package for jest tests"
+version = "2.13.7-rc4"

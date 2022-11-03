@@ -1,11 +1,17 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'bump-cargo-version'
+description: 'A Github action to bump package version in cargo.toml'
+author: 'Kento Oki'
 inputs:
-  milliseconds: # change this
+  cargo-path:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Specifies the path to cargo.toml in relative or absolute.'
+    default: '.'
+outputs:
+  version:
+    description: 'Outputs parsed package version in the specified Cargo.toml'
+branding:
+  icon: cloud-drizzle
+  color: green
 runs:
   using: 'node16'
   main: 'dist/index.js'
